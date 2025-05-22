@@ -18,6 +18,8 @@ export default class {
             const content = await getDocument(ctx.request.pathname);
             return app.view("tmpl.html", { meta, summary, content });
         });
+
+        app.run();
     }
 
 }
