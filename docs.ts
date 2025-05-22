@@ -1,6 +1,6 @@
 import { resolve } from "@std/path";
 import { parse as parseYaml } from "@std/yaml";
-import { marked } from 'npm:marked';
+import { marked } from 'npm:marked@15.0.12';
 
 const cache = new Map();
 const SUMMARY = "SUMMARY.md";
