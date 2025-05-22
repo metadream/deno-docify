@@ -1,6 +1,6 @@
 # Deno-Docify
 
-A super easy-to-use markdown document preview framework in Deno.
+A super easy-to-use markdown document preview framework in Deno..
 
 ## Demo
 
