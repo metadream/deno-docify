@@ -4,16 +4,26 @@ A super easy-to-use markdown document preview framework in Deno.
 
 ## Demo
 
-https://tech-docs.deno.dev
+https://docify.deno.dev
 
 ## Usage
 
 1. Create a start file with any name (ex. `start.ts`) in your document folder
    root. The content of the file is as follows:
 
-```
+```typescript
 // start.ts
 import "jsr:@focal/docify@1.0.6";
+```
+
+Add a `deno.json` file in the same directory with the following content:
+```json
+{
+  "compilerOptions": {
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true
+  }
+}
 ```
 
 2. Create `SUMMARY.md` and `README.md` in your document folder root. The
@@ -23,7 +33,7 @@ import "jsr:@focal/docify@1.0.6";
    A typical `SUMMARY.md` contains the following content. Among them, metadata
    between `---` and first-level title are not required.
 
-```
+```markdown
 ---
 name: My Document
 logo: https://example.com/logo.png
@@ -57,6 +67,6 @@ footer: Copyright (c) 2023
 
 4. Run start file.
 
-```
+```bash
 deno run --allow-net --allow-read start.ts
 ```
