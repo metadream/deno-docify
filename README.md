@@ -2,9 +2,10 @@
 
 A super easy-to-use markdown document preview framework in Deno.
 
-## Demo
+## Example
 
-https://docify.deno.dev
+Demo: https://docify.deno.dev
+Source: https://github.com/metadream/tech-docs
 
 ## Usage
 
