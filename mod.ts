@@ -8,7 +8,7 @@ export default class {
 
     constructor(app: Application) {
         const { engine } = app;
-        const tmpl = new URL('./test.tmpl', import.meta.url).pathname;
+        const tmpl = new URL('./tmpl.html', import.meta.url).pathname;
 
         app.get("/", async () => {
             const summary = await getSummary();
