@@ -13,6 +13,8 @@ export default class {
             const { pathname } = ctx.request;
             const summary = await getSummary();
             const content = pathname === "/" ? await getReadme() : await getDocument(pathname);
+
+            ctx.response.headers.set("Content-Type", "text/html; charset=utf-8");
             return app.engine.render(tmpl, { meta, summary, content });
         });
 
