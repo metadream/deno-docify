@@ -13,7 +13,7 @@ https://docify.deno.dev
 
 ```typescript
 // start.ts
-import "jsr:@focal/docify@1.0.6";
+import "jsr:@focal/docify@1.0.10";
 ```
 
 Add a `deno.json` file in the same directory with the following content:
