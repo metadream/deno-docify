@@ -8,18 +8,19 @@ export default class {
 
     constructor(app: Application) {
         const { engine } = app;
-        const tmpl = new URL('./tmpl.html', import.meta.url).pathname;
+        const tmplUrl = new URL(import.meta.resolve('./tmpl.html'));
+        const tmplText = Deno.readTextFileSync(tmplUrl);
 
         app.get("/", async () => {
             const summary = await getSummary();
             const content = await getReadme();
-            return engine.view(tmpl, { meta, summary, content });
+            return engine.render(tmplText, { meta, summary, content });
         });
 
         app.get("/*", async (ctx: HttpContext) => {
             const summary = await getSummary();
             const content = await getDocument(ctx.request.pathname);
-            return engine.view(tmpl, { meta, summary, content });
+            return engine.render(tmplText, { meta, summary, content });
         });
 
         app.run();
