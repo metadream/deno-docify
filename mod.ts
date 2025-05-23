@@ -9,6 +9,8 @@ export default class {
     constructor(app: Application) {
         const { engine } = app;
         const tmplUrl = new URL(import.meta.resolve('./tmpl.html'));
+
+        console.log(tmplUrl)
         const tmplText = Deno.readTextFileSync(tmplUrl);
 
         app.get("/", async () => {
