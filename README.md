@@ -1,6 +1,6 @@
 # Deno-Docify
 
-A super easy-to-use markdown document preview framework in Deno..
+A super easy-to-use markdown document preview framework in Deno.
 
 ## Demo
 
@@ -13,7 +13,7 @@ https://tech-docs.deno.dev
 
 ```
 // start.ts
-import "https://deno.land/x/book/mod.ts";
+import "jsr:@focal/docify@1.0.2";
 ```
 
 2. Create `SUMMARY.md` and `README.md` in your document folder root. The
