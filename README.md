@@ -13,7 +13,7 @@ https://tech-docs.deno.dev
 
 ```
 // start.ts
-import "jsr:@focal/docify@1.0.2";
+import "jsr:@focal/docify@1.0.6";
 ```
 
 2. Create `SUMMARY.md` and `README.md` in your document folder root. The
